@@ -5,8 +5,17 @@ datasources:
     type: elasticsearch
     access: proxy
     url: https://olt-elasticsearch-common-fr.es.francecentral.azure.elastic-cloud.com/
+    database: indextest
+    basicAuth: true
+    basicAuthUser: "grafana_prod"
+    isDefault: false
     jsonData:
-      index: '[metrics-]YYYY.MM.DD'
-      interval: Daily
-      timeField: '@timestamp'
-
+      esVersion: "8.0.0"
+      includeFrozen: false
+      logLevelField: ""
+      logMessageField: ""
+      maxConcurrentShardRequests: 5
+      timeField: "@timestamp"
+    secureJsonData:
+      basicAuthPassword: "C=XJak6'uU4qJtK"
+    readOnly: false
